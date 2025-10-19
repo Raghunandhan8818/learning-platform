@@ -16,3 +16,6 @@ export const formatTime = (date: Date): string => {
 export { config };
 export * from './ui/components';
 export { useCounterStore } from './stores/counterStore';
+export { useThemeStore } from './stores/themeStore';
+export {ThemeProvider} from './ui/ThemeProvider';
+export { useThemeManager } from './ui/theme/useThemeManager';
