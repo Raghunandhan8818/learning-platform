@@ -15,3 +15,4 @@ export const formatTime = (date: Date): string => {
 // Export Tamagui configuration and components
 export { config };
 export * from './ui/components';
+export { useCounterStore } from './stores/counterStore';

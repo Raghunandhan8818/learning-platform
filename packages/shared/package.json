@@ -14,7 +14,8 @@
     "@tamagui/config": "^1.135.3",
     "@tamagui/core": "^1.135.3",
     "date-fns": "^3.0.0",
-    "tamagui": "^1.135.3"
+    "tamagui": "^1.135.3",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",

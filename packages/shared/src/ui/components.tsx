@@ -2,7 +2,6 @@ import { Button, Text, View } from 'tamagui';
 import { WELCOME_MESSAGE } from '../index';
 import React from 'react';
 
-// Shared Tamagui components that work on both web and mobile
 export const WelcomeScreen = () => {
   return (
     <View
