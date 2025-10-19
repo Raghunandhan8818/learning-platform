@@ -16,8 +16,12 @@
   },
   "dependencies": {
     "@learning/shared": "*",
+    "@tamagui/config": "^1.135.3",
+    "@tamagui/core": "^1.135.3",
+    "process": "^0.11.10",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tamagui": "^1.135.3"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.0",

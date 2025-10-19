@@ -11,7 +11,10 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "date-fns": "^3.0.0"
+    "@tamagui/config": "^1.135.3",
+    "@tamagui/core": "^1.135.3",
+    "date-fns": "^3.0.0",
+    "tamagui": "^1.135.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",

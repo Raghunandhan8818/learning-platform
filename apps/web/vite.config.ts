@@ -4,4 +4,13 @@ import { defineConfig } from 'vite';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  define: {
+    global: 'globalThis',
+    'process.env': {},
+  },
+  resolve: {
+    alias: {
+      process: 'process/browser',
+    },
+  },
 });

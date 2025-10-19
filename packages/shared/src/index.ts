@@ -1,6 +1,7 @@
 // Shared utilities and types for the learning platform
-export const PLATFORM_NAME = 'Learning Platform';
+import config from './ui/tamagui.config.ts';
 
+export const PLATFORM_NAME = 'Learning Platform';
 export const WELCOME_MESSAGE = `Welcome to ${PLATFORM_NAME}!`;
 
 export const formatDate = (date: Date): string => {
@@ -10,3 +11,7 @@ export const formatDate = (date: Date): string => {
 export const formatTime = (date: Date): string => {
   return date.toLocaleTimeString();
 };
+
+// Export Tamagui configuration and components
+export { config };
+export * from './ui/components';
