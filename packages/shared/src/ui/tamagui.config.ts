@@ -1,5 +1,4 @@
-import { createTamagui } from '@tamagui/core';
-import { config as defaultConfig } from '@tamagui/config/v3';
+import { createTamagui, createTokens } from '@tamagui/core';
 
 const customColors = {
   primary: '#3B82F6',
@@ -24,12 +23,71 @@ const customColors = {
   gray900: '#111827',
 };
 
+const tokens = createTokens({
+  color: {
+    primary: customColors.primary,
+    primaryDark: customColors.primaryDark,
+    secondary: customColors.secondary,
+    accent: customColors.accent,
+    success: customColors.success,
+    warning: customColors.warning,
+    error: customColors.error,
+    info: customColors.info,
+    borderColor: customColors.gray200,
+    borderColorHover: customColors.gray300,
+    borderColorPress: customColors.gray400,
+  },
+  space: {
+    1: 4,
+    2: 8,
+    3: 12,
+    4: 16,
+    5: 20,
+    6: 24,
+    7: 28,
+    8: 32,
+    9: 36,
+    10: 40,
+  },
+  size: {
+    1: 4,
+    2: 8,
+    3: 12,
+    4: 16,
+    5: 20,
+    6: 24,
+    7: 28,
+    8: 32,
+    9: 36,
+    10: 40,
+  },
+  radius: {
+    1: 4,
+    2: 8,
+    3: 12,
+    4: 16,
+    5: 20,
+    6: 24,
+    7: 28,
+    8: 32,
+    9: 36,
+    10: 40,
+  },
+  zIndex: {
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+  },
+});
+
 const config = createTamagui({
-  ...defaultConfig,
+  tokens,
+  
 
   themes: {
     light: {
-      ...defaultConfig.themes.light,
       primary: customColors.primary,
       primaryDark: customColors.primaryDark,
       secondary: customColors.secondary,
@@ -52,7 +110,6 @@ const config = createTamagui({
     },
 
     dark: {
-      ...defaultConfig.themes.dark,
       primary: customColors.primary,
       primaryDark: customColors.primaryDark,
       secondary: customColors.secondary,
@@ -72,21 +129,6 @@ const config = createTamagui({
       colorPress: customColors.gray300,
       colorFocus: customColors.gray200,
       placeholderColor: customColors.gray500,
-    },
-  },
-
-  tokens: {
-    ...defaultConfig.tokens,
-    color: {
-      ...defaultConfig.tokens.color,
-      primary: customColors.primary,
-      primaryDark: customColors.primaryDark,
-      secondary: customColors.secondary,
-      accent: customColors.accent,
-      success: customColors.success,
-      warning: customColors.warning,
-      error: customColors.error,
-      info: customColors.info,
     },
   },
 });

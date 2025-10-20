@@ -1,6 +1,7 @@
 import { Button, Text, View } from 'tamagui';
-import { WELCOME_MESSAGE } from '../index';
 import React from 'react';
+
+const WELCOME_MESSAGE = 'Welcome to Learning Platform!';
 
 export const WelcomeScreen = () => {
   return (
@@ -14,7 +15,7 @@ export const WelcomeScreen = () => {
       <Text fontSize="$6" fontWeight="bold" marginBottom="$4" textAlign="center">
         {WELCOME_MESSAGE}
       </Text>
-      <Button theme="blue" size="$4">
+      <Button size="$4">
         Hello World!
       </Button>
     </View>

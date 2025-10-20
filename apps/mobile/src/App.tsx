@@ -6,14 +6,12 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createJSONStorage } from 'zustand/middleware';
 import { useEffect } from 'react';
 
-// Configure storage for mobile
 const mobileStorage = createJSONStorage(() => AsyncStorage);
 
 export default function App() {
     const { count, increment, decrement, reset } = useCounterStore();
     const { theme, setTheme } = useThemeStore();
 
-    // Load theme from AsyncStorage on app start
     useEffect(() => {
         const loadTheme = async () => {
             try {
@@ -31,7 +29,6 @@ export default function App() {
         loadTheme();
     }, [setTheme]);
 
-    // Save theme to AsyncStorage when it changes
     useEffect(() => {
         const saveTheme = async () => {
             try {
@@ -53,11 +50,11 @@ export default function App() {
                 padding="$4"
                 gap="$4"
             >
-                <Text fontSize="$6" fontWeight="bold" textAlign="center" color="$color">
+                <Text fontSize="$6" fontWeight="bold" textAlign="center" color="$color" fontFamily="System">
                     {WELCOME_MESSAGE}
                 </Text>
 
-                <Text fontSize="$8" fontWeight="bold" color="$color">
+                <Text fontSize="$8" fontWeight="bold" color="$color" fontFamily="System">
                     Count: {count}
                 </Text>
 

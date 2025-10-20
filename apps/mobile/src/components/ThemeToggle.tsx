@@ -7,7 +7,7 @@ export const ThemeToggle: React.FC = () => {
 
     return (
         <View flexDirection="column" alignItems="center" gap="$3">
-            <Text fontSize="$4" color="$color" fontWeight="bold">
+            <Text fontSize="$4" color="$color" fontWeight="bold" fontFamily="System">
                 Theme: {theme}
             </Text>
 
