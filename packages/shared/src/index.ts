@@ -1,5 +1,5 @@
 // Shared utilities and types for the learning platform
-import config from './ui/tamagui.config.ts';
+import config from './ui/tamagui.config';
 
 export const PLATFORM_NAME = 'Learning Platform';
 export const WELCOME_MESSAGE = `Welcome to ${PLATFORM_NAME}!`;
@@ -13,7 +13,6 @@ export const formatTime = (date: Date): string => {
 };
 
 export { config };
-export { useCounterStore } from './stores/counterStore';
 export { useThemeStore } from './stores/themeStore';
 export { ThemeProvider } from './ui/ThemeProvider';
 export { useThemeManager } from './ui/theme/useThemeManager';

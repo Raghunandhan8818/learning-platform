@@ -1,25 +1,16 @@
-import React, { useEffect } from 'react';
-import { TamaguiProvider, Theme } from 'tamagui';
-import {config} from '@learning/shared';
-import { useThemeStore } from '@learning/shared';
+import React from 'react';
+import { YStack } from 'tamagui';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { ThemeProvider, ActivityListingPage, mockActivities } from '@learning/shared';
 
-interface ThemeProviderProps {
-    children: React.ReactNode;
+export default function App() {
+  return (
+    <SafeAreaProvider>
+      <ThemeProvider>
+        <YStack f={1} bg="$background">
+          <ActivityListingPage activities={mockActivities} />
+        </YStack>
+      </ThemeProvider>
+    </SafeAreaProvider>
+  );
 }
-
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-    const { theme, setTheme } = useThemeStore();
-
-
-    useEffect(() => {
-    }, []);
-
-    return (
-        <TamaguiProvider config={config} defaultTheme={theme}>
-            <Theme name={theme}>
-                {children}
-            </Theme>
-        </TamaguiProvider>
-    );
-};
-

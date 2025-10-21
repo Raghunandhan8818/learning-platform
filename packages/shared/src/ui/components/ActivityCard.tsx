@@ -2,9 +2,12 @@ import React from 'react';
 import { View, Text, Button, XStack, YStack } from 'tamagui';
 import type { Activity } from '../../types/activity';
 
-const getTypeBadgeStyle = (type: string) => {
+const getTypeBadgeStyle = (type: string, classType?: string) => {
   switch (type) {
     case 'online-class':
+      if (classType === 'recorded') {
+        return { bg: '#e0e7ff', color: '#4338ca', label: 'RECORDED CLASS' };
+      }
       return { bg: '#dbeafe', color: '#1e40af', label: 'LIVE CLASS' };
     case 'assignment':
       return { bg: '#fef3c7', color: '#92400e', label: 'ASSIGNMENT' };
@@ -49,10 +52,12 @@ export const ActivityCard: React.FC<{
   activity: Activity;
   onAction: (id: string, action: string) => void;
 }> = ({ activity, onAction }) => {
-  const typeBadge = getTypeBadgeStyle(activity.type);
+  const typeBadge = getTypeBadgeStyle(activity.type, activity.classType);
   const statusBadge = getStatusBadgeStyle(activity.status);
   const difficultyBadge = getDifficultyBadgeStyle(activity.difficulty);
   const isCompleted = activity.status === 'completed';
+
+  const isLiveClass = activity.classType === 'live' || activity.isLive;
 
   const getActionButton = () => {
     switch (activity.status) {
@@ -106,7 +111,7 @@ export const ActivityCard: React.FC<{
                 {typeBadge.label}
               </Text>
             </View>
-            {activity.isLive && (
+            {activity.type === 'online-class' && isLiveClass && activity.status !== 'completed' && (
               <View
                 backgroundColor="$error"
                 paddingHorizontal="$3"

@@ -1,6 +1,7 @@
 export type ActivityType = 'online-class' | 'assignment' | 'quiz' | 'discussion';
 export type ActivityStatus = 'not-started' | 'in-progress' | 'completed' | 'overdue';
 export type ActivityDifficulty = 'beginner' | 'intermediate' | 'advanced';
+export type ClassType = 'live' | 'recorded';
 
 export interface Activity {
   id: string;
@@ -10,6 +11,7 @@ export interface Activity {
   status: ActivityStatus;
   difficulty: ActivityDifficulty;
   tags: string[];
+  classType?: ClassType;
   isLive?: boolean;
   instructor?: string;
   duration?: number;

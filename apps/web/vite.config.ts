@@ -10,7 +10,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      'process': 'process/browser',
+      process: 'process/browser',
       'react-native': 'react-native-web',
     },
     extensions: [
@@ -35,7 +35,7 @@ export default defineConfig({
       'tamagui',
       '@tamagui/core',
       '@tamagui/config',
-      '@tamagui/linear-gradient'
+      '@tamagui/linear-gradient',
     ],
     force: true,
     esbuildOptions: {
@@ -69,4 +69,3 @@ export default defineConfig({
     target: 'es2020',
   },
 });
-

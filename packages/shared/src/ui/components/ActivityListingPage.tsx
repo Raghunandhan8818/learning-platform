@@ -17,7 +17,7 @@ export const ActivityListingPage: React.FC<ActivityListingPageProps> = ({
 }) => {
   return (
     <YStack flex={1} height="100%" backgroundColor="$background">
-      <GradientNavBar title="Learning Activities" />
+      <GradientNavBar title="Happy Learning" />
       <ActivityList activities={activities} onActivityAction={onActivityAction} />
     </YStack>
   );
