@@ -12,10 +12,15 @@ export const formatTime = (date: Date): string => {
   return date.toLocaleTimeString();
 };
 
-// Export Tamagui configuration and components
 export { config };
-export * from './ui/components';
 export { useCounterStore } from './stores/counterStore';
 export { useThemeStore } from './stores/themeStore';
-export {ThemeProvider} from './ui/ThemeProvider';
+export { ThemeProvider } from './ui/ThemeProvider';
 export { useThemeManager } from './ui/theme/useThemeManager';
+export * from './types/activity';
+export * from './data/mockActivities';
+export { GradientNavBar } from './ui/components/GradientNavbar';
+export { SearchAndFilters } from './ui/components/SearchAndFilters';
+export { ActivityCard } from './ui/components/ActivityCard';
+export { ActivityList } from './ui/components/ActivityList';
+export { ActivityListingPage } from './ui/components/ActivityListingPage';

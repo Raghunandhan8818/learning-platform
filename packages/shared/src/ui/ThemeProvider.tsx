@@ -1,7 +1,7 @@
-import React from 'react';
-import { TamaguiProvider } from '@tamagui/core';
+import React, { useLayoutEffect, useState, useEffect } from 'react';
+import { TamaguiProvider, Theme } from 'tamagui';
+import config from './tamagui.config'; // Assuming config is in the src root
 import { useThemeStore } from '../stores/themeStore';
-import config from './tamagui.config';
 
 interface ThemeProviderProps {
     children: React.ReactNode;
@@ -9,16 +9,27 @@ interface ThemeProviderProps {
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     const { theme } = useThemeStore();
+    const [isMounted, setIsMounted] = useState(false);
 
-    console.log('ThemeProvider: Current theme is:', theme);
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+
+    useLayoutEffect(() => {
+        if (typeof document !== 'undefined') {
+            document.body.classList.remove('light', 'dark');
+            document.body.classList.add(theme);
+        }
+    }, [theme]);
 
     return (
-        <TamaguiProvider
-            config={config}
-            defaultTheme={theme}
-            key={theme}
-        >
-            {children}
+        <TamaguiProvider config={config} defaultTheme="light">
+            {isMounted ? (
+                <Theme name={theme}>
+                    {children}
+                </Theme>
+            ) : null}
         </TamaguiProvider>
     );
 };

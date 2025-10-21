@@ -3067,7 +3067,7 @@
     "@tamagui/text" "1.135.3"
     "@tamagui/web" "1.135.3"
 
-"@tamagui/linear-gradient@1.135.3":
+"@tamagui/linear-gradient@1.135.3", "@tamagui/linear-gradient@^1.135.3":
   version "1.135.3"
   resolved "https://registry.yarnpkg.com/@tamagui/linear-gradient/-/linear-gradient-1.135.3.tgz#aef1ddda0888f45d568741d7ca22e3963d0aeab5"
   integrity sha512-qLnVIdsxTSzbGVg3leR7Rgb2ZEzKQRYFx8sWfyChKh5oOKcq1010XY5MZ5P0wznG0aAoEjdcgxkgr/awBIWxgw==
@@ -6168,6 +6168,11 @@ expo-keep-awake@~12.8.2:
   version "12.8.2"
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-12.8.2.tgz#6cfdf8ad02b5fa130f99d4a1eb98e459d5b4332e"
   integrity sha512-uiQdGbSX24Pt8nGbnmBtrKq6xL/Tm3+DuDRGBk/3ZE/HlizzNosGRIufIMJ/4B4FRw4dw8KU81h2RLuTjbay6g==
+
+expo-linear-gradient@^15.0.7:
+  version "15.0.7"
+  resolved "https://registry.yarnpkg.com/expo-linear-gradient/-/expo-linear-gradient-15.0.7.tgz#d1ebbda5ecc58afb58398f5a06affd0e83894149"
+  integrity sha512-yF+y+9Shpr/OQFfy/wglB/0bykFMbwHBTuMRa5Of/r2P1wbkcacx8rg0JsUWkXH/rn2i2iWdubyqlxSJa3ggZA==
 
 expo-modules-autolinking@1.10.3:
   version "1.10.3"
@@ -9589,6 +9594,11 @@ react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
+
+react-native-safe-area-context@^5.6.1:
+  version "5.6.1"
+  resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-5.6.1.tgz#cb4d249ef1a6f7e8fd0cfdfa9764838dffda26b6"
+  integrity sha512-/wJE58HLEAkATzhhX1xSr+fostLsK8Q97EfpfMDKo8jlOc1QKESSX/FQrhk7HhQH/2uSaox4Y86sNaI02kteiA==
 
 react-native-web@^0.21.2:
   version "0.21.2"

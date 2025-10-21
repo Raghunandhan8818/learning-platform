@@ -13,6 +13,7 @@
   "dependencies": {
     "@tamagui/config": "^1.135.3",
     "@tamagui/core": "^1.135.3",
+    "@tamagui/linear-gradient": "^1.135.3",
     "date-fns": "^3.0.0",
     "tamagui": "^1.135.3",
     "zustand": "^5.0.8"
