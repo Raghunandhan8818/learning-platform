@@ -15,18 +15,19 @@ export const GradientNavBar: React.FC<GradientNavBarProps> = ({
 }) => {
   const { theme, toggleTheme } = useThemeStore();
 
-  const getPaddingTop = () => {
-    if (Platform.OS === 'web') {
-    }
+  let paddingTop: string | number = '$4';
 
+  if (Platform.OS !== 'web') {
     try {
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
       const { useSafeAreaInsets } = require('react-native-safe-area-context');
+      // eslint-disable-next-line react-hooks/rules-of-hooks
       const insets = useSafeAreaInsets();
-      return insets.top + 16;
+      paddingTop = insets.top + 16;
     } catch (error) {
-      return '$6';
+      paddingTop = '$6';
     }
-  };
+  }
 
   return (
     <LinearGradient
@@ -34,7 +35,7 @@ export const GradientNavBar: React.FC<GradientNavBarProps> = ({
       start={[0, 1]}
       end={[1, 0]}
       padding="$4"
-      paddingTop={getPaddingTop()}
+      paddingTop={paddingTop}
       shadowColor="$shadowColor"
       shadowOffset={{ width: 0, height: 4 }}
       shadowOpacity={0.2}
